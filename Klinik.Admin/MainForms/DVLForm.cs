@@ -21,13 +21,74 @@ namespace Klinik.Admin.MainForms
             mode(true);
         }
 
+        private void BtnInsert_Click(object sender, EventArgs e)
+        {
+            mode(false);
+
+            dateTimePicker1.Text = DateTime.Now.Date.ToString();
+            TbBinusID.Text =
+            CbSection.Text =
+            TbName.Text =
+            TbPhone.Text =
+            TbDiagnose.Text =
+            TbAnamnesis.Text =
+            TbImplementation.Text =
+            TbNotes.Text = "";
+
+
+
+
+            _insert = true;
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+
+            mode(false);
+
+
+
+            _update = true;
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            int _custom = 0;
+            //do delete data
+
+            mode(true, _custom);
+
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            if (_insert)
+            {
+                //add to db
+            }
+            else if (_update) {
+
+            }
+
+            //save to db
+            _insert = _update = false;
+            mode(true);
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            _insert = _update = false;
+            mode(true);
+        }
+
         private void mode(bool state, int custom = 0) {
             BtnSave.Enabled = 
-            BtnCancel.Enabled = !state;
-
+            BtnCancel.Enabled =
             dateTimePicker1.Enabled =
+            CbSection.Enabled = !state;
+
+
             TbBinusID.ReadOnly =
-            CbSection.Enabled =
             TbName.ReadOnly =
             TbPhone.ReadOnly = 
             TbDiagnose.ReadOnly =

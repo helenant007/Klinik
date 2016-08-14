@@ -301,6 +301,7 @@
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnCancel.UseVisualStyleBackColor = false;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // BtnSave
             // 
@@ -320,6 +321,7 @@
             this.BtnSave.Text = "Save";
             this.BtnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnSave.UseVisualStyleBackColor = false;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // BtnDelete
             // 
@@ -339,6 +341,7 @@
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnDelete.UseVisualStyleBackColor = false;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnUpdate
             // 
@@ -358,6 +361,7 @@
             this.BtnUpdate.Text = "Update";
             this.BtnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnUpdate.UseVisualStyleBackColor = false;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // BtnInsert
             // 
@@ -377,6 +381,7 @@
             this.BtnInsert.Text = "Insert";
             this.BtnInsert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnInsert.UseVisualStyleBackColor = false;
+            this.BtnInsert.Click += new System.EventHandler(this.BtnInsert_Click);
             // 
             // DVLForm
             // 
