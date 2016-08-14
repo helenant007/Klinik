@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klinik.Data", "Klinik.Data\Klinik.Data.csproj", "{DDCE0BB2-2210-45D7-BF81-AB65E30AD440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klinik.Seeds", "Klinik.Seeds\Klinik.Seeds.csproj", "{68DF471B-8641-4532-B394-7C9E912C8C47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klinik.Admin", "Klinik.Admin\Klinik.Admin.csproj", "{50DBD3F4-3FD9-41A5-9077-14E3B78A2BDA}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDCE0BB2-2210-45D7-BF81-AB65E30AD440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDCE0BB2-2210-45D7-BF81-AB65E30AD440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDCE0BB2-2210-45D7-BF81-AB65E30AD440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDCE0BB2-2210-45D7-BF81-AB65E30AD440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68DF471B-8641-4532-B394-7C9E912C8C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68DF471B-8641-4532-B394-7C9E912C8C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68DF471B-8641-4532-B394-7C9E912C8C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68DF471B-8641-4532-B394-7C9E912C8C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50DBD3F4-3FD9-41A5-9077-14E3B78A2BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50DBD3F4-3FD9-41A5-9077-14E3B78A2BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50DBD3F4-3FD9-41A5-9077-14E3B78A2BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50DBD3F4-3FD9-41A5-9077-14E3B78A2BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
