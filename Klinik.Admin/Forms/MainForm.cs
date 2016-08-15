@@ -25,5 +25,10 @@ namespace Klinik.Admin.Forms
         {
             new Admin.MainForms.DVLForm().Show();
         }
+
+        private void BtnSection_Click(object sender, EventArgs e)
+        {
+            new Admin.MainForms.SectionListForm().Show();
+        }
     }
 }

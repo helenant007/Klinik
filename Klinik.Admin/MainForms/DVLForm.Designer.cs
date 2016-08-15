@@ -90,13 +90,13 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(706, 607);
+            this.dataGridView1.Size = new System.Drawing.Size(706, 649);
             this.dataGridView1.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(794, 152);
+            this.label2.Location = new System.Drawing.Point(799, 177);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 17);
             this.label2.TabIndex = 3;
@@ -104,14 +104,14 @@
             // 
             // TbBinusID
             // 
-            this.TbBinusID.Location = new System.Drawing.Point(916, 149);
+            this.TbBinusID.Location = new System.Drawing.Point(921, 174);
             this.TbBinusID.Name = "TbBinusID";
             this.TbBinusID.Size = new System.Drawing.Size(200, 23);
             this.TbBinusID.TabIndex = 4;
             // 
             // TbName
             // 
-            this.TbName.Location = new System.Drawing.Point(916, 209);
+            this.TbName.Location = new System.Drawing.Point(921, 234);
             this.TbName.Name = "TbName";
             this.TbName.Size = new System.Drawing.Size(200, 23);
             this.TbName.TabIndex = 6;
@@ -119,7 +119,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(794, 212);
+            this.label3.Location = new System.Drawing.Point(799, 237);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 17);
             this.label3.TabIndex = 5;
@@ -128,7 +128,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(794, 124);
+            this.label4.Location = new System.Drawing.Point(799, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 17);
             this.label4.TabIndex = 7;
@@ -136,7 +136,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(916, 120);
+            this.dateTimePicker1.Location = new System.Drawing.Point(921, 145);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
             this.dateTimePicker1.TabIndex = 8;
@@ -144,7 +144,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(794, 181);
+            this.label5.Location = new System.Drawing.Point(799, 206);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 17);
             this.label5.TabIndex = 9;
@@ -153,14 +153,14 @@
             // CbSection
             // 
             this.CbSection.FormattingEnabled = true;
-            this.CbSection.Location = new System.Drawing.Point(916, 178);
+            this.CbSection.Location = new System.Drawing.Point(921, 203);
             this.CbSection.Name = "CbSection";
             this.CbSection.Size = new System.Drawing.Size(200, 25);
             this.CbSection.TabIndex = 10;
             // 
             // TbDiagnose
             // 
-            this.TbDiagnose.Location = new System.Drawing.Point(916, 267);
+            this.TbDiagnose.Location = new System.Drawing.Point(921, 292);
             this.TbDiagnose.Multiline = true;
             this.TbDiagnose.Name = "TbDiagnose";
             this.TbDiagnose.Size = new System.Drawing.Size(200, 82);
@@ -169,7 +169,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(794, 270);
+            this.label6.Location = new System.Drawing.Point(799, 295);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 17);
             this.label6.TabIndex = 11;
@@ -177,7 +177,7 @@
             // 
             // TbAnamnesis
             // 
-            this.TbAnamnesis.Location = new System.Drawing.Point(916, 355);
+            this.TbAnamnesis.Location = new System.Drawing.Point(921, 380);
             this.TbAnamnesis.Multiline = true;
             this.TbAnamnesis.Name = "TbAnamnesis";
             this.TbAnamnesis.Size = new System.Drawing.Size(200, 82);
@@ -186,7 +186,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(794, 358);
+            this.label7.Location = new System.Drawing.Point(799, 383);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 17);
             this.label7.TabIndex = 13;
@@ -194,7 +194,7 @@
             // 
             // TbImplementation
             // 
-            this.TbImplementation.Location = new System.Drawing.Point(916, 443);
+            this.TbImplementation.Location = new System.Drawing.Point(921, 468);
             this.TbImplementation.Multiline = true;
             this.TbImplementation.Name = "TbImplementation";
             this.TbImplementation.Size = new System.Drawing.Size(200, 82);
@@ -203,7 +203,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(794, 446);
+            this.label8.Location = new System.Drawing.Point(799, 471);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(116, 17);
             this.label8.TabIndex = 15;
@@ -211,7 +211,7 @@
             // 
             // TbNotes
             // 
-            this.TbNotes.Location = new System.Drawing.Point(916, 531);
+            this.TbNotes.Location = new System.Drawing.Point(921, 556);
             this.TbNotes.Multiline = true;
             this.TbNotes.Name = "TbNotes";
             this.TbNotes.Size = new System.Drawing.Size(200, 82);
@@ -220,7 +220,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(794, 531);
+            this.label9.Location = new System.Drawing.Point(799, 556);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 17);
             this.label9.TabIndex = 17;
@@ -228,7 +228,7 @@
             // 
             // TbPhone
             // 
-            this.TbPhone.Location = new System.Drawing.Point(916, 238);
+            this.TbPhone.Location = new System.Drawing.Point(921, 263);
             this.TbPhone.Name = "TbPhone";
             this.TbPhone.Size = new System.Drawing.Size(200, 23);
             this.TbPhone.TabIndex = 20;
@@ -236,7 +236,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(794, 241);
+            this.label10.Location = new System.Drawing.Point(799, 266);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 17);
             this.label10.TabIndex = 19;
@@ -244,13 +244,15 @@
             // 
             // BtnSearch
             // 
+            this.BtnSearch.BackColor = System.Drawing.Color.LightGray;
+            this.BtnSearch.FlatAppearance.BorderSize = 0;
             this.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSearch.Location = new System.Drawing.Point(1156, 17);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(75, 23);
             this.BtnSearch.TabIndex = 29;
             this.BtnSearch.Text = "Search!";
-            this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.UseVisualStyleBackColor = false;
             // 
             // textBox8
             // 
@@ -293,7 +295,7 @@
             this.BtnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnCancel.Image = global::Klinik.Admin.Properties.Resources.cancel;
             this.BtnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCancel.Location = new System.Drawing.Point(995, 635);
+            this.BtnCancel.Location = new System.Drawing.Point(1021, 660);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Padding = new System.Windows.Forms.Padding(25, 0, 20, 0);
             this.BtnCancel.Size = new System.Drawing.Size(150, 34);
@@ -313,7 +315,7 @@
             this.BtnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.Image")));
             this.BtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSave.Location = new System.Drawing.Point(817, 635);
+            this.BtnSave.Location = new System.Drawing.Point(843, 660);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Padding = new System.Windows.Forms.Padding(35, 0, 25, 0);
             this.BtnSave.Size = new System.Drawing.Size(150, 34);
@@ -333,7 +335,7 @@
             this.BtnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnDelete.Image = global::Klinik.Admin.Properties.Resources.delete;
             this.BtnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDelete.Location = new System.Drawing.Point(1081, 62);
+            this.BtnDelete.Location = new System.Drawing.Point(1102, 62);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Padding = new System.Windows.Forms.Padding(30, 0, 20, 0);
             this.BtnDelete.Size = new System.Drawing.Size(150, 34);
@@ -353,7 +355,7 @@
             this.BtnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnUpdate.Image = global::Klinik.Admin.Properties.Resources.update;
             this.BtnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUpdate.Location = new System.Drawing.Point(916, 62);
+            this.BtnUpdate.Location = new System.Drawing.Point(937, 62);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Padding = new System.Windows.Forms.Padding(25, 0, 15, 0);
             this.BtnUpdate.Size = new System.Drawing.Size(150, 34);
@@ -373,7 +375,7 @@
             this.BtnInsert.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnInsert.Image = global::Klinik.Admin.Properties.Resources.insert;
             this.BtnInsert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInsert.Location = new System.Drawing.Point(747, 62);
+            this.BtnInsert.Location = new System.Drawing.Point(768, 62);
             this.BtnInsert.Name = "BtnInsert";
             this.BtnInsert.Padding = new System.Windows.Forms.Padding(35, 0, 25, 0);
             this.BtnInsert.Size = new System.Drawing.Size(150, 34);
@@ -388,7 +390,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1243, 724);
+            this.ClientSize = new System.Drawing.Size(1284, 724);
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label11);
