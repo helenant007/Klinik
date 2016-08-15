@@ -30,5 +30,10 @@ namespace Klinik.Admin.Forms
         {
             new Admin.MainForms.SectionListForm().Show();
         }
+
+        private void BtnHospitalized_Click(object sender, EventArgs e)
+        {
+            new Admin.MainForms.HospitalizedForm().Show();
+        }
     }
 }

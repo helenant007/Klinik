@@ -228,26 +228,26 @@
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="KlinikModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="KlinikModelContainer" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Patients" EntityType="KlinikModel.Patient" />
+          <EntitySet Name="MsPatients" EntityType="KlinikModel.MsPatient" />
           <EntitySet Name="PatientVisits" EntityType="KlinikModel.PatientVisit" />
           <EntitySet Name="DetailPatientVisits" EntityType="KlinikModel.DetailPatientVisit" />
-          <EntitySet Name="MedicinePurchases" EntityType="KlinikModel.MedicinePurchase" />
-          <EntitySet Name="Medicines" EntityType="KlinikModel.Medicine" />
+          <EntitySet Name="MsMedicinePurchases" EntityType="KlinikModel.MsMedicinePurchase" />
+          <EntitySet Name="MsMedicines" EntityType="KlinikModel.MsMedicine" />
           <EntitySet Name="MedicineStocks" EntityType="KlinikModel.MedicineStock" />
           <EntitySet Name="DetailMedicinePurchases" EntityType="KlinikModel.DetailMedicinePurchase" />
           <EntitySet Name="Admins" EntityType="KlinikModel.Admin" />
           <EntitySet Name="DetailHospitalizeds" EntityType="KlinikModel.DetailHospitalized" />
-          <EntitySet Name="Hospitalizeds" EntityType="KlinikModel.Hospitalized" />
+          <EntitySet Name="MsHospitalizeds" EntityType="KlinikModel.MsHospitalized" />
           <AssociationSet Name="MedicinePurchaseDetailMedicinePurchase" Association="KlinikModel.MedicinePurchaseDetailMedicinePurchase">
-            <End Role="MedicinePurchase" EntitySet="MedicinePurchases" />
+            <End Role="MedicinePurchase" EntitySet="MsMedicinePurchases" />
             <End Role="DetailMedicinePurchase" EntitySet="DetailMedicinePurchases" />
           </AssociationSet>
           <AssociationSet Name="MedicineMedicineStock" Association="KlinikModel.MedicineMedicineStock">
-            <End Role="Medicine" EntitySet="Medicines" />
+            <End Role="Medicine" EntitySet="MsMedicines" />
             <End Role="MedicineStock" EntitySet="MedicineStocks" />
           </AssociationSet>
           <AssociationSet Name="MedicineDetailMedicinePurchase" Association="KlinikModel.MedicineDetailMedicinePurchase">
-            <End Role="Medicine" EntitySet="Medicines" />
+            <End Role="Medicine" EntitySet="MsMedicines" />
             <End Role="DetailMedicinePurchase" EntitySet="DetailMedicinePurchases" />
           </AssociationSet>
           <AssociationSet Name="PatientVisitDetailPatientVisit" Association="KlinikModel.PatientVisitDetailPatientVisit">
@@ -255,19 +255,21 @@
             <End Role="DetailPatientVisit" EntitySet="DetailPatientVisits" />
           </AssociationSet>
           <AssociationSet Name="PatientPatientVisit" Association="KlinikModel.PatientPatientVisit">
-            <End Role="Patient" EntitySet="Patients" />
+            <End Role="Patient" EntitySet="MsPatients" />
             <End Role="PatientVisit" EntitySet="PatientVisits" />
           </AssociationSet>
           <AssociationSet Name="PatientDetailHospitalized" Association="KlinikModel.PatientDetailHospitalized">
-            <End Role="Patient" EntitySet="Patients" />
+            <End Role="Patient" EntitySet="MsPatients" />
             <End Role="DetailHospitalized" EntitySet="DetailHospitalizeds" />
           </AssociationSet>
           <AssociationSet Name="HospitalizedDetailHospitalized" Association="KlinikModel.HospitalizedDetailHospitalized">
-            <End Role="Hospitalized" EntitySet="Hospitalizeds" />
+            <End Role="Hospitalized" EntitySet="MsHospitalizeds" />
             <End Role="DetailHospitalized" EntitySet="DetailHospitalizeds" />
           </AssociationSet>
+          <EntitySet Name="MsDiagnoses" EntityType="KlinikModel.MsDiagnose" />
+          <EntitySet Name="MsSections" EntityType="KlinikModel.MsSection" />
         </EntityContainer>
-        <EntityType Name="Patient">
+        <EntityType Name="MsPatient">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -302,7 +304,7 @@
           <Property Name="Qty" Type="String" Nullable="false" />
           <NavigationProperty Name="PatientVisit" Relationship="KlinikModel.PatientVisitDetailPatientVisit" FromRole="DetailPatientVisit" ToRole="PatientVisit" />
         </EntityType>
-        <EntityType Name="MedicinePurchase">
+        <EntityType Name="MsMedicinePurchase">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -311,7 +313,7 @@
           <Property Name="Total" Type="Int32" Nullable="false" />
           <NavigationProperty Name="DetailMedicinePurchases" Relationship="KlinikModel.MedicinePurchaseDetailMedicinePurchase" FromRole="MedicinePurchase" ToRole="DetailMedicinePurchase" />
         </EntityType>
-        <EntityType Name="Medicine">
+        <EntityType Name="MsMedicine">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -360,7 +362,7 @@
           <NavigationProperty Name="Patient" Relationship="KlinikModel.PatientDetailHospitalized" FromRole="DetailHospitalized" ToRole="Patient" />
           <NavigationProperty Name="Hospitalized" Relationship="KlinikModel.HospitalizedDetailHospitalized" FromRole="DetailHospitalized" ToRole="Hospitalized" />
         </EntityType>
-        <EntityType Name="Hospitalized">
+        <EntityType Name="MsHospitalized">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -369,15 +371,15 @@
           <NavigationProperty Name="DetailHospitalizeds" Relationship="KlinikModel.HospitalizedDetailHospitalized" FromRole="Hospitalized" ToRole="DetailHospitalized" />
         </EntityType>
         <Association Name="MedicinePurchaseDetailMedicinePurchase">
-          <End Type="KlinikModel.MedicinePurchase" Role="MedicinePurchase" Multiplicity="1" />
+          <End Type="KlinikModel.MsMedicinePurchase" Role="MedicinePurchase" Multiplicity="1" />
           <End Type="KlinikModel.DetailMedicinePurchase" Role="DetailMedicinePurchase" Multiplicity="*" />
         </Association>
         <Association Name="MedicineMedicineStock">
-          <End Type="KlinikModel.Medicine" Role="Medicine" Multiplicity="1" />
+          <End Type="KlinikModel.MsMedicine" Role="Medicine" Multiplicity="1" />
           <End Type="KlinikModel.MedicineStock" Role="MedicineStock" Multiplicity="*" />
         </Association>
         <Association Name="MedicineDetailMedicinePurchase">
-          <End Type="KlinikModel.Medicine" Role="Medicine" Multiplicity="1" />
+          <End Type="KlinikModel.MsMedicine" Role="Medicine" Multiplicity="1" />
           <End Type="KlinikModel.DetailMedicinePurchase" Role="DetailMedicinePurchase" Multiplicity="0..1" />
         </Association>
         <Association Name="PatientVisitDetailPatientVisit">
@@ -385,25 +387,40 @@
           <End Type="KlinikModel.DetailPatientVisit" Role="DetailPatientVisit" Multiplicity="*" />
         </Association>
         <Association Name="PatientPatientVisit">
-          <End Type="KlinikModel.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="KlinikModel.MsPatient" Role="Patient" Multiplicity="1" />
           <End Type="KlinikModel.PatientVisit" Role="PatientVisit" Multiplicity="*" />
         </Association>
         <Association Name="PatientDetailHospitalized">
-          <End Type="KlinikModel.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="KlinikModel.MsPatient" Role="Patient" Multiplicity="1" />
           <End Type="KlinikModel.DetailHospitalized" Role="DetailHospitalized" Multiplicity="*" />
         </Association>
         <Association Name="HospitalizedDetailHospitalized">
-          <End Type="KlinikModel.Hospitalized" Role="Hospitalized" Multiplicity="1" />
+          <End Type="KlinikModel.MsHospitalized" Role="Hospitalized" Multiplicity="1" />
           <End Type="KlinikModel.DetailHospitalized" Role="DetailHospitalized" Multiplicity="*" />
         </Association>
+        <EntityType Name="MsDiagnose">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DiagnoseName" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MsSection">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SectionName" Type="String" Nullable="false" />
+          <Property Name="Abbr" Type="String" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="KlinikModelStoreContainer" CdmEntityContainer="KlinikModelContainer">
-    <EntitySetMapping Name="Patients">
-      <EntityTypeMapping TypeName="IsTypeOf(KlinikModel.Patient)">
+    <EntitySetMapping Name="MsPatients">
+      <EntityTypeMapping TypeName="IsTypeOf(KlinikModel.MsPatient)">
         <MappingFragment StoreEntitySet="Patients">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="BinusianId" ColumnName="BinusianId" />
@@ -435,8 +452,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MedicinePurchases">
-      <EntityTypeMapping TypeName="IsTypeOf(KlinikModel.MedicinePurchase)">
+    <EntitySetMapping Name="MsMedicinePurchases">
+      <EntityTypeMapping TypeName="IsTypeOf(KlinikModel.MsMedicinePurchase)">
         <MappingFragment StoreEntitySet="MedicinePurchases">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Date" ColumnName="Date" />
@@ -444,8 +461,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Medicines">
-      <EntityTypeMapping TypeName="IsTypeOf(KlinikModel.Medicine)">
+    <EntitySetMapping Name="MsMedicines">
+      <EntityTypeMapping TypeName="IsTypeOf(KlinikModel.MsMedicine)">
         <MappingFragment StoreEntitySet="Medicines">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -491,8 +508,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Hospitalizeds">
-      <EntityTypeMapping TypeName="IsTypeOf(KlinikModel.Hospitalized)">
+    <EntitySetMapping Name="MsHospitalizeds">
+      <EntityTypeMapping TypeName="IsTypeOf(KlinikModel.MsHospitalized)">
         <MappingFragment StoreEntitySet="Hospitalizeds">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Date" ColumnName="Date" />

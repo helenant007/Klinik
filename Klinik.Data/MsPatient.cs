@@ -12,10 +12,10 @@ namespace Klinik.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Patient
+    public partial class MsPatient
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Patient()
+        public MsPatient()
         {
             this.PatientVisits = new HashSet<PatientVisit>();
             this.DetailHospitalizeds = new HashSet<DetailHospitalized>();

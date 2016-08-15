@@ -12,12 +12,10 @@ namespace Klinik.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class MedicineStock
+    public partial class MsSection
     {
         public int Id { get; set; }
-        public string Qty { get; set; }
-        public System.DateTime ExpDate { get; set; }
-    
-        public virtual MsMedicine Medicine { get; set; }
+        public string SectionName { get; set; }
+        public string Abbr { get; set; }
     }
 }

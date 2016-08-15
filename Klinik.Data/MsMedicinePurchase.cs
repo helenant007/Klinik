@@ -12,10 +12,10 @@ namespace Klinik.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class MedicinePurchase
+    public partial class MsMedicinePurchase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MedicinePurchase()
+        public MsMedicinePurchase()
         {
             this.DetailMedicinePurchases = new HashSet<DetailMedicinePurchase>();
         }

@@ -159,6 +159,7 @@
             this.BtnHospitalized.Text = "Hospitalized Visitor";
             this.BtnHospitalized.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnHospitalized.UseVisualStyleBackColor = false;
+            this.BtnHospitalized.Click += new System.EventHandler(this.BtnHospitalized_Click);
             // 
             // BtnDVL
             // 

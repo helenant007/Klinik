@@ -19,7 +19,7 @@ namespace Klinik.Data
         public string Qty { get; set; }
         public System.DateTime ExpDate { get; set; }
     
-        public virtual MedicinePurchase MedicinePurchase { get; set; }
-        public virtual Medicine Medicine { get; set; }
+        public virtual MsMedicinePurchase MedicinePurchase { get; set; }
+        public virtual MsMedicine Medicine { get; set; }
     }
 }
