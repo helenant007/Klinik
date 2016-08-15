@@ -63,9 +63,6 @@
     <Compile Include="DetailPatientVisit.cs">
       <DependentUpon>KlinikModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Hospitalized.cs">
-      <DependentUpon>KlinikModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="KlinikModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -81,16 +78,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KlinikModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Medicine.cs">
-      <DependentUpon>KlinikModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MedicinePurchase.cs">
-      <DependentUpon>KlinikModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="MedicineStock.cs">
       <DependentUpon>KlinikModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Patient.cs">
+    <Compile Include="MsDiagnose.cs">
+      <DependentUpon>KlinikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsHospitalized.cs">
+      <DependentUpon>KlinikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsMedicine.cs">
+      <DependentUpon>KlinikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsMedicinePurchase.cs">
+      <DependentUpon>KlinikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsPatient.cs">
+      <DependentUpon>KlinikModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MsSection.cs">
       <DependentUpon>KlinikModel.tt</DependentUpon>
     </Compile>
     <Compile Include="PatientVisit.cs">

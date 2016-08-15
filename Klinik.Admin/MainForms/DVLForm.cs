@@ -47,7 +47,6 @@ namespace Klinik.Admin.MainForms
             mode(false);
 
 
-
             _update = true;
         }
 

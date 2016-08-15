@@ -82,6 +82,12 @@
     <Compile Include="MainForms\DVLForm.Designer.cs">
       <DependentUpon>DVLForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\HospitalizedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\HospitalizedForm.Designer.cs">
+      <DependentUpon>HospitalizedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\SectionListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\DVLForm.resx">
       <DependentUpon>DVLForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\HospitalizedForm.resx">
+      <DependentUpon>HospitalizedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\SectionListForm.resx">
       <DependentUpon>SectionListForm.cs</DependentUpon>

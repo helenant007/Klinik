@@ -30,6 +30,6 @@ namespace Klinik.Data
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetailPatientVisit> DetailPatientVisits { get; set; }
-        public virtual Patient Patient { get; set; }
+        public virtual MsPatient Patient { get; set; }
     }
 }

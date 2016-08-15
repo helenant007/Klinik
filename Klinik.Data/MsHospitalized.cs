@@ -12,12 +12,18 @@ namespace Klinik.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class MedicineStock
+    public partial class MsHospitalized
     {
-        public int Id { get; set; }
-        public string Qty { get; set; }
-        public System.DateTime ExpDate { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public MsHospitalized()
+        {
+            this.DetailHospitalizeds = new HashSet<DetailHospitalized>();
+        }
     
-        public virtual MsMedicine Medicine { get; set; }
+        public int Id { get; set; }
+        public string Date { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DetailHospitalized> DetailHospitalizeds { get; set; }
     }
 }

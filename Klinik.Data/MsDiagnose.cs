@@ -12,18 +12,9 @@ namespace Klinik.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Hospitalized
+    public partial class MsDiagnose
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Hospitalized()
-        {
-            this.DetailHospitalizeds = new HashSet<DetailHospitalized>();
-        }
-    
         public int Id { get; set; }
-        public string Date { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DetailHospitalized> DetailHospitalizeds { get; set; }
+        public string DiagnoseName { get; set; }
     }
 }

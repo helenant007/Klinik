@@ -25,15 +25,17 @@ namespace Klinik.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Patient> Patients { get; set; }
+        public virtual DbSet<MsPatient> MsPatients { get; set; }
         public virtual DbSet<PatientVisit> PatientVisits { get; set; }
         public virtual DbSet<DetailPatientVisit> DetailPatientVisits { get; set; }
-        public virtual DbSet<MedicinePurchase> MedicinePurchases { get; set; }
-        public virtual DbSet<Medicine> Medicines { get; set; }
+        public virtual DbSet<MsMedicinePurchase> MsMedicinePurchases { get; set; }
+        public virtual DbSet<MsMedicine> MsMedicines { get; set; }
         public virtual DbSet<MedicineStock> MedicineStocks { get; set; }
         public virtual DbSet<DetailMedicinePurchase> DetailMedicinePurchases { get; set; }
         public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<DetailHospitalized> DetailHospitalizeds { get; set; }
-        public virtual DbSet<Hospitalized> Hospitalizeds { get; set; }
+        public virtual DbSet<MsHospitalized> MsHospitalizeds { get; set; }
+        public virtual DbSet<MsDiagnose> MsDiagnoses { get; set; }
+        public virtual DbSet<MsSection> MsSections { get; set; }
     }
 }

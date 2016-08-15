@@ -19,7 +19,7 @@ namespace Klinik.Data
         public string HospitalName { get; set; }
         public string Notes { get; set; }
     
-        public virtual Patient Patient { get; set; }
-        public virtual Hospitalized Hospitalized { get; set; }
+        public virtual MsPatient Patient { get; set; }
+        public virtual MsHospitalized Hospitalized { get; set; }
     }
 }
