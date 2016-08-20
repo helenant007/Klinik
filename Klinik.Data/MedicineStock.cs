@@ -15,7 +15,6 @@ namespace Klinik.Data
     public partial class MedicineStock
     {
         public int Id { get; set; }
-        public string Qty { get; set; }
         public System.DateTime ExpDate { get; set; }
     
         public virtual MsMedicine Medicine { get; set; }

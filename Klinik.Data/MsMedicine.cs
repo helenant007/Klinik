@@ -23,9 +23,11 @@ namespace Klinik.Data
         public int Id { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }
+        public string Qty { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MedicineStock> MedicineStocks { get; set; }
         public virtual DetailMedicinePurchase DetailMedicinePurchases { get; set; }
+        public virtual DetailPatientVisit DetailPatientVisit { get; set; }
     }
 }

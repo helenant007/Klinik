@@ -14,8 +14,17 @@ namespace Klinik.Data
     
     public partial class MsSection
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public MsSection()
+        {
+            this.MsPatients = new HashSet<MsPatient>();
+        }
+    
         public int Id { get; set; }
         public string SectionName { get; set; }
         public string Abbr { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MsPatient> MsPatients { get; set; }
     }
 }

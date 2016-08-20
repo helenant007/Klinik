@@ -14,7 +14,19 @@ namespace Klinik.Data
     
     public partial class MsDiagnose
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public MsDiagnose()
+        {
+            this.DetailHospitalizeds = new HashSet<DetailHospitalized>();
+            this.PatientVisits = new HashSet<PatientVisit>();
+        }
+    
         public int Id { get; set; }
         public string DiagnoseName { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DetailHospitalized> DetailHospitalizeds { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PatientVisit> PatientVisits { get; set; }
     }
 }

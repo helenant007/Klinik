@@ -88,6 +88,18 @@
     <Compile Include="MainForms\HospitalizedForm.Designer.cs">
       <DependentUpon>HospitalizedForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainForms\MedicinePurchaseHeaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MedicinePurchaseHeaderForm.Designer.cs">
+      <DependentUpon>MedicinePurchaseHeaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\MedicinePurchaseDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\MedicinePurchaseDetailForm.Designer.cs">
+      <DependentUpon>MedicinePurchaseDetailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForms\MedicineForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +148,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\HospitalizedForm.resx">
       <DependentUpon>HospitalizedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MedicinePurchaseHeaderForm.resx">
+      <DependentUpon>MedicinePurchaseHeaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\MedicinePurchaseDetailForm.resx">
+      <DependentUpon>MedicinePurchaseDetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForms\MedicineForm.resx">
       <DependentUpon>MedicineForm.cs</DependentUpon>

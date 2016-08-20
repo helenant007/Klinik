@@ -15,11 +15,11 @@ namespace Klinik.Data
     public partial class DetailHospitalized
     {
         public int Id { get; set; }
-        public string Diagnose { get; set; }
         public string HospitalName { get; set; }
         public string Notes { get; set; }
     
         public virtual MsPatient Patient { get; set; }
         public virtual MsHospitalized Hospitalized { get; set; }
+        public virtual MsDiagnose MsDiagnose { get; set; }
     }
 }
