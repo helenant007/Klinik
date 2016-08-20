@@ -26,11 +26,11 @@ namespace Klinik.Data
         public string Name { get; set; }
         public string Gender { get; set; }
         public string BloodType { get; set; }
-        public string Section { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PatientVisit> PatientVisits { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetailHospitalized> DetailHospitalizeds { get; set; }
+        public virtual MsSection MsSection { get; set; }
     }
 }

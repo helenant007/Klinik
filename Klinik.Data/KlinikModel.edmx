@@ -268,6 +268,22 @@
           </AssociationSet>
           <EntitySet Name="MsDiagnoses" EntityType="KlinikModel.MsDiagnose" />
           <EntitySet Name="MsSections" EntityType="KlinikModel.MsSection" />
+          <AssociationSet Name="MsSectionMsPatient" Association="KlinikModel.MsSectionMsPatient">
+            <End Role="MsSection" EntitySet="MsSections" />
+            <End Role="MsPatient" EntitySet="MsPatients" />
+          </AssociationSet>
+          <AssociationSet Name="MsDiagnoseDetailHospitalized" Association="KlinikModel.MsDiagnoseDetailHospitalized">
+            <End Role="MsDiagnose" EntitySet="MsDiagnoses" />
+            <End Role="DetailHospitalized" EntitySet="DetailHospitalizeds" />
+          </AssociationSet>
+          <AssociationSet Name="MsDiagnosePatientVisit" Association="KlinikModel.MsDiagnosePatientVisit">
+            <End Role="MsDiagnose" EntitySet="MsDiagnoses" />
+            <End Role="PatientVisit" EntitySet="PatientVisits" />
+          </AssociationSet>
+          <AssociationSet Name="DetailPatientVisitMsMedicine" Association="KlinikModel.DetailPatientVisitMsMedicine">
+            <End Role="DetailPatientVisit" EntitySet="DetailPatientVisits" />
+            <End Role="MsMedicine" EntitySet="MsMedicines" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="MsPatient">
           <Key>
@@ -278,9 +294,9 @@
           <Property Name="Name" Type="String" Nullable="false" />
           <Property Name="Gender" Type="String" Nullable="false" />
           <Property Name="BloodType" Type="String" Nullable="false" />
-          <Property Name="Section" Type="String" Nullable="false" />
           <NavigationProperty Name="PatientVisits" Relationship="KlinikModel.PatientPatientVisit" FromRole="Patient" ToRole="PatientVisit" />
           <NavigationProperty Name="DetailHospitalizeds" Relationship="KlinikModel.PatientDetailHospitalized" FromRole="Patient" ToRole="DetailHospitalized" />
+          <NavigationProperty Name="MsSection" Relationship="KlinikModel.MsSectionMsPatient" FromRole="MsPatient" ToRole="MsSection" />
         </EntityType>
         <EntityType Name="PatientVisit">
           <Key>
@@ -289,12 +305,12 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TimeIn" Type="DateTime" Nullable="false" />
           <Property Name="TimeOut" Type="DateTime" Nullable="false" />
-          <Property Name="Diagnose" Type="String" Nullable="false" />
           <Property Name="Condition" Type="String" Nullable="false" />
           <Property Name="Treatment" Type="String" Nullable="false" />
           <Property Name="Comments" Type="String" Nullable="true" />
           <NavigationProperty Name="DetailPatientVisits" Relationship="KlinikModel.PatientVisitDetailPatientVisit" FromRole="PatientVisit" ToRole="DetailPatientVisit" />
           <NavigationProperty Name="Patient" Relationship="KlinikModel.PatientPatientVisit" FromRole="PatientVisit" ToRole="Patient" />
+          <NavigationProperty Name="MsDiagnose" Relationship="KlinikModel.MsDiagnosePatientVisit" FromRole="PatientVisit" ToRole="MsDiagnose" />
         </EntityType>
         <EntityType Name="DetailPatientVisit">
           <Key>
@@ -303,6 +319,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Qty" Type="String" Nullable="false" />
           <NavigationProperty Name="PatientVisit" Relationship="KlinikModel.PatientVisitDetailPatientVisit" FromRole="DetailPatientVisit" ToRole="PatientVisit" />
+          <NavigationProperty Name="MsMedicines" Relationship="KlinikModel.DetailPatientVisitMsMedicine" FromRole="DetailPatientVisit" ToRole="MsMedicine" />
         </EntityType>
         <EntityType Name="MsMedicinePurchase">
           <Key>
@@ -322,13 +339,14 @@
           <Property Name="Type" Type="String" Nullable="false" />
           <NavigationProperty Name="MedicineStocks" Relationship="KlinikModel.MedicineMedicineStock" FromRole="Medicine" ToRole="MedicineStock" />
           <NavigationProperty Name="DetailMedicinePurchases" Relationship="KlinikModel.MedicineDetailMedicinePurchase" FromRole="Medicine" ToRole="DetailMedicinePurchase" />
+          <NavigationProperty Name="DetailPatientVisit" Relationship="KlinikModel.DetailPatientVisitMsMedicine" FromRole="MsMedicine" ToRole="DetailPatientVisit" />
+          <Property Name="Qty" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="MedicineStock">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Qty" Type="String" Nullable="false" />
           <Property Name="ExpDate" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="Medicine" Relationship="KlinikModel.MedicineMedicineStock" FromRole="MedicineStock" ToRole="Medicine" />
         </EntityType>
@@ -356,11 +374,11 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Diagnose" Type="String" Nullable="false" />
           <Property Name="HospitalName" Type="String" Nullable="false" />
           <Property Name="Notes" Type="String" Nullable="false" />
           <NavigationProperty Name="Patient" Relationship="KlinikModel.PatientDetailHospitalized" FromRole="DetailHospitalized" ToRole="Patient" />
           <NavigationProperty Name="Hospitalized" Relationship="KlinikModel.HospitalizedDetailHospitalized" FromRole="DetailHospitalized" ToRole="Hospitalized" />
+          <NavigationProperty Name="MsDiagnose" Relationship="KlinikModel.MsDiagnoseDetailHospitalized" FromRole="DetailHospitalized" ToRole="MsDiagnose" />
         </EntityType>
         <EntityType Name="MsHospitalized">
           <Key>
@@ -404,6 +422,8 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DiagnoseName" Type="String" Nullable="false" />
+          <NavigationProperty Name="DetailHospitalizeds" Relationship="KlinikModel.MsDiagnoseDetailHospitalized" FromRole="MsDiagnose" ToRole="DetailHospitalized" />
+          <NavigationProperty Name="PatientVisits" Relationship="KlinikModel.MsDiagnosePatientVisit" FromRole="MsDiagnose" ToRole="PatientVisit" />
         </EntityType>
         <EntityType Name="MsSection">
           <Key>
@@ -412,7 +432,24 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SectionName" Type="String" Nullable="false" />
           <Property Name="Abbr" Type="String" Nullable="false" />
+          <NavigationProperty Name="MsPatients" Relationship="KlinikModel.MsSectionMsPatient" FromRole="MsSection" ToRole="MsPatient" />
         </EntityType>
+        <Association Name="MsSectionMsPatient">
+          <End Type="KlinikModel.MsSection" Role="MsSection" Multiplicity="1" />
+          <End Type="KlinikModel.MsPatient" Role="MsPatient" Multiplicity="*" />
+        </Association>
+        <Association Name="MsDiagnoseDetailHospitalized">
+          <End Type="KlinikModel.MsDiagnose" Role="MsDiagnose" Multiplicity="1" />
+          <End Type="KlinikModel.DetailHospitalized" Role="DetailHospitalized" Multiplicity="*" />
+        </Association>
+        <Association Name="MsDiagnosePatientVisit">
+          <End Type="KlinikModel.MsDiagnose" Role="MsDiagnose" Multiplicity="1" />
+          <End Type="KlinikModel.PatientVisit" Role="PatientVisit" Multiplicity="*" />
+        </Association>
+        <Association Name="DetailPatientVisitMsMedicine">
+          <End Type="KlinikModel.DetailPatientVisit" Role="DetailPatientVisit" Multiplicity="1" />
+          <End Type="KlinikModel.MsMedicine" Role="MsMedicine" Multiplicity="*" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -427,7 +464,6 @@
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Gender" ColumnName="Gender" />
           <ScalarProperty Name="BloodType" ColumnName="BloodType" />
-          <ScalarProperty Name="Section" ColumnName="Section" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -437,7 +473,6 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
           <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
-          <ScalarProperty Name="Diagnose" ColumnName="Diagnose" />
           <ScalarProperty Name="Condition" ColumnName="Condition" />
           <ScalarProperty Name="Treatment" ColumnName="Treatment" />
           <ScalarProperty Name="Comments" ColumnName="Comments" />
@@ -474,7 +509,6 @@
       <EntityTypeMapping TypeName="IsTypeOf(KlinikModel.MedicineStock)">
         <MappingFragment StoreEntitySet="MedicineStocks">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Qty" ColumnName="Qty" />
           <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -502,7 +536,6 @@
       <EntityTypeMapping TypeName="IsTypeOf(KlinikModel.DetailHospitalized)">
         <MappingFragment StoreEntitySet="DetailHospitalizeds">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Diagnose" ColumnName="Diagnose" />
           <ScalarProperty Name="HospitalName" ColumnName="HospitalName" />
           <ScalarProperty Name="Notes" ColumnName="Notes" />
         </MappingFragment>

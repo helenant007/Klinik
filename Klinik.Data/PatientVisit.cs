@@ -23,7 +23,6 @@ namespace Klinik.Data
         public int Id { get; set; }
         public System.DateTime TimeIn { get; set; }
         public System.DateTime TimeOut { get; set; }
-        public string Diagnose { get; set; }
         public string Condition { get; set; }
         public string Treatment { get; set; }
         public string Comments { get; set; }
@@ -31,5 +30,6 @@ namespace Klinik.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetailPatientVisit> DetailPatientVisits { get; set; }
         public virtual MsPatient Patient { get; set; }
+        public virtual MsDiagnose MsDiagnose { get; set; }
     }
 }
