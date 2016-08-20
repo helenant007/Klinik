@@ -122,6 +122,7 @@
             this.BtnMedicine.Text = "Medicine Stock";
             this.BtnMedicine.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnMedicine.UseVisualStyleBackColor = false;
+            this.BtnMedicine.Click += new System.EventHandler(this.BtnMedicine_Click);
             // 
             // BtnSection
             // 
