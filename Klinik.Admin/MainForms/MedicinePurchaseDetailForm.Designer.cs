@@ -47,38 +47,13 @@
             this.NumQty = new System.Windows.Forms.NumericUpDown();
             this.DtpExp = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.BtnCancel = new System.Windows.Forms.Button();
-            this.BtnSave = new System.Windows.Forms.Button();
-            this.BtnDelete = new System.Windows.Forms.Button();
-            this.BtnUpdate = new System.Windows.Forms.Button();
-            this.BtnInsert = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label16 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumQty)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnSearch
@@ -246,170 +221,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(807, 132);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 17);
+            this.label4.Size = new System.Drawing.Size(152, 17);
             this.label4.TabIndex = 62;
-            this.label4.Text = "Medicine Purchase Header Id: xx";
-            // 
-            // BtnCancel
-            // 
-            this.BtnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.BtnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnCancel.Image = global::Klinik.Admin.Properties.Resources.cancel;
-            this.BtnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCancel.Location = new System.Drawing.Point(1029, 808);
-            this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Padding = new System.Windows.Forms.Padding(25, 0, 20, 0);
-            this.BtnCancel.Size = new System.Drawing.Size(150, 34);
-            this.BtnCancel.TabIndex = 55;
-            this.BtnCancel.Text = "Cancel";
-            this.BtnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCancel.UseVisualStyleBackColor = false;
-            // 
-            // BtnSave
-            // 
-            this.BtnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.BtnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.Image")));
-            this.BtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSave.Location = new System.Drawing.Point(851, 808);
-            this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Padding = new System.Windows.Forms.Padding(35, 0, 25, 0);
-            this.BtnSave.Size = new System.Drawing.Size(150, 34);
-            this.BtnSave.TabIndex = 54;
-            this.BtnSave.Text = "Save";
-            this.BtnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnSave.UseVisualStyleBackColor = false;
-            // 
-            // BtnDelete
-            // 
-            this.BtnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.BtnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnDelete.Image = global::Klinik.Admin.Properties.Resources.delete;
-            this.BtnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDelete.Location = new System.Drawing.Point(1110, 210);
-            this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Padding = new System.Windows.Forms.Padding(30, 0, 20, 0);
-            this.BtnDelete.Size = new System.Drawing.Size(150, 34);
-            this.BtnDelete.TabIndex = 53;
-            this.BtnDelete.Text = "Delete";
-            this.BtnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnDelete.UseVisualStyleBackColor = false;
-            // 
-            // BtnUpdate
-            // 
-            this.BtnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.BtnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnUpdate.Image = global::Klinik.Admin.Properties.Resources.update;
-            this.BtnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUpdate.Location = new System.Drawing.Point(945, 210);
-            this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Padding = new System.Windows.Forms.Padding(25, 0, 15, 0);
-            this.BtnUpdate.Size = new System.Drawing.Size(150, 34);
-            this.BtnUpdate.TabIndex = 52;
-            this.BtnUpdate.Text = "Update";
-            this.BtnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // BtnInsert
-            // 
-            this.BtnInsert.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnInsert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
-            this.BtnInsert.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnInsert.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnInsert.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnInsert.Image = global::Klinik.Admin.Properties.Resources.insert;
-            this.BtnInsert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInsert.Location = new System.Drawing.Point(776, 210);
-            this.BtnInsert.Name = "BtnInsert";
-            this.BtnInsert.Padding = new System.Windows.Forms.Padding(35, 0, 25, 0);
-            this.BtnInsert.Size = new System.Drawing.Size(150, 34);
-            this.BtnInsert.TabIndex = 51;
-            this.BtnInsert.Text = "Insert";
-            this.BtnInsert.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnInsert.UseVisualStyleBackColor = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(807, 411);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(215, 17);
-            this.label7.TabIndex = 85;
-            this.label7.Text = "Medicine Purchase Header Id: xx";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(929, 573);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 84;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(929, 513);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(200, 23);
-            this.numericUpDown1.TabIndex = 83;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LightGray;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1164, 295);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 82;
-            this.button1.Text = "Search!";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(937, 295);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 23);
-            this.textBox1.TabIndex = 81;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label8.Location = new System.Drawing.Point(702, 296);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 19);
-            this.label8.TabIndex = 80;
-            this.label8.Text = "Search By:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Name",
-            "Section",
-            "Binusian ID",
-            "Diagnose"});
-            this.comboBox2.Location = new System.Drawing.Point(785, 295);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(146, 25);
-            this.comboBox2.TabIndex = 79;
+            this.label4.Text = "Medicine Purchase Id: ";
             // 
             // button2
             // 
@@ -459,7 +273,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Image = global::Klinik.Admin.Properties.Resources.delete;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1110, 340);
+            this.button4.Location = new System.Drawing.Point(1099, 61);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(30, 0, 20, 0);
             this.button4.Size = new System.Drawing.Size(150, 34);
@@ -478,7 +292,7 @@
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.Image = global::Klinik.Admin.Properties.Resources.update;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(945, 340);
+            this.button5.Location = new System.Drawing.Point(934, 61);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(25, 0, 15, 0);
             this.button5.Size = new System.Drawing.Size(150, 34);
@@ -497,7 +311,7 @@
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button6.Image = global::Klinik.Admin.Properties.Resources.insert;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(776, 340);
+            this.button6.Location = new System.Drawing.Point(765, 61);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 25, 0);
             this.button6.Size = new System.Drawing.Size(150, 34);
@@ -506,138 +320,17 @@
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(929, 541);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 23);
-            this.textBox2.TabIndex = 73;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(807, 544);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 17);
-            this.label9.TabIndex = 72;
-            this.label9.Text = "Price:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(807, 573);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(94, 17);
-            this.label12.TabIndex = 71;
-            this.label12.Text = "Expired Date:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "masih",
-            "kosong"});
-            this.comboBox3.Location = new System.Drawing.Point(929, 481);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(200, 25);
-            this.comboBox3.TabIndex = 70;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(807, 484);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(40, 17);
-            this.label13.TabIndex = 69;
-            this.label13.Text = "Type:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(807, 515);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 17);
-            this.label14.TabIndex = 68;
-            this.label14.Text = "Quantity:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(929, 452);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 23);
-            this.textBox3.TabIndex = 67;
-            this.textBox3.Text = "-Pick List-";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(807, 455);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(122, 17);
-            this.label15.TabIndex = 66;
-            this.label15.Text = "Medicine\'s Name:";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(24, 340);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(706, 649);
-            this.dataGridView2.TabIndex = 65;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label16.Location = new System.Drawing.Point(207, 296);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(104, 19);
-            this.label16.TabIndex = 64;
-            this.label16.Text = "Select Month:";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(319, 293);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(160, 25);
-            this.comboBox4.TabIndex = 63;
-            // 
             // MedicinePurchaseDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1284, 1023);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.DtpExp);
             this.Controls.Add(this.NumQty);
@@ -645,11 +338,6 @@
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.CbSearchBy);
-            this.Controls.Add(this.BtnCancel);
-            this.Controls.Add(this.BtnSave);
-            this.Controls.Add(this.BtnDelete);
-            this.Controls.Add(this.BtnUpdate);
-            this.Controls.Add(this.BtnInsert);
             this.Controls.Add(this.TbPrice);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
@@ -667,8 +355,6 @@
             this.Text = "z";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumQty)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -680,11 +366,6 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox CbSearchBy;
-        private System.Windows.Forms.Button BtnCancel;
-        private System.Windows.Forms.Button BtnSave;
-        private System.Windows.Forms.Button BtnDelete;
-        private System.Windows.Forms.Button BtnUpdate;
-        private System.Windows.Forms.Button BtnInsert;
         private System.Windows.Forms.TextBox TbPrice;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
@@ -699,28 +380,10 @@
         private System.Windows.Forms.NumericUpDown NumQty;
         private System.Windows.Forms.DateTimePicker DtpExp;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox comboBox4;
     }
 }
