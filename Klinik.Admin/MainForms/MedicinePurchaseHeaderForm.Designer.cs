@@ -46,8 +46,21 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.DtpExp = new System.Windows.Forms.DateTimePicker();
+            this.NumQty = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.CbSection = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TbMedicName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumQty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnSearch
@@ -55,7 +68,7 @@
             this.BtnSearch.BackColor = System.Drawing.Color.LightGray;
             this.BtnSearch.FlatAppearance.BorderSize = 0;
             this.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSearch.Location = new System.Drawing.Point(1164, 16);
+            this.BtnSearch.Location = new System.Drawing.Point(1188, 27);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(75, 23);
             this.BtnSearch.TabIndex = 59;
@@ -64,16 +77,16 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(937, 16);
+            this.textBox8.Location = new System.Drawing.Point(994, 27);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(221, 23);
+            this.textBox8.Size = new System.Drawing.Size(188, 23);
             this.textBox8.TabIndex = 58;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label11.Location = new System.Drawing.Point(702, 17);
+            this.label11.Location = new System.Drawing.Point(755, 30);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(81, 19);
             this.label11.TabIndex = 57;
@@ -85,17 +98,17 @@
             this.CbSearchBy.FormattingEnabled = true;
             this.CbSearchBy.Items.AddRange(new object[] {
             "Name",
-            "Section",
-            "Binusian ID",
-            "Diagnose"});
-            this.CbSearchBy.Location = new System.Drawing.Point(785, 16);
+            "Type",
+            "Price",
+            "Exp Date"});
+            this.CbSearchBy.Location = new System.Drawing.Point(842, 27);
             this.CbSearchBy.Name = "CbSearchBy";
             this.CbSearchBy.Size = new System.Drawing.Size(146, 25);
             this.CbSearchBy.TabIndex = 56;
             // 
             // TbPrice
             // 
-            this.TbPrice.Location = new System.Drawing.Point(929, 176);
+            this.TbPrice.Location = new System.Drawing.Point(995, 283);
             this.TbPrice.Name = "TbPrice";
             this.TbPrice.ReadOnly = true;
             this.TbPrice.Size = new System.Drawing.Size(200, 23);
@@ -104,29 +117,29 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(807, 179);
+            this.label10.Location = new System.Drawing.Point(825, 286);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 17);
+            this.label10.Size = new System.Drawing.Size(154, 17);
             this.label10.TabIndex = 49;
-            this.label10.Text = "Total:";
+            this.label10.Text = "Total Type of Medicine:";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 77);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(706, 649);
+            this.dataGridView1.Size = new System.Drawing.Size(706, 310);
             this.dataGridView1.TabIndex = 32;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label1.Location = new System.Drawing.Point(207, 17);
+            this.label1.Location = new System.Drawing.Point(228, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 19);
@@ -136,7 +149,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(319, 14);
+            this.comboBox1.Location = new System.Drawing.Point(340, 24);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 25);
@@ -145,14 +158,14 @@
             // BtnCancel
             // 
             this.BtnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.BtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(152)))), ((int)(((byte)(117)))));
             this.BtnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnCancel.Image = global::Klinik.Admin.Properties.Resources.cancel;
             this.BtnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCancel.Location = new System.Drawing.Point(1029, 659);
+            this.BtnCancel.Location = new System.Drawing.Point(1033, 675);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Padding = new System.Windows.Forms.Padding(25, 0, 20, 0);
             this.BtnCancel.Size = new System.Drawing.Size(150, 34);
@@ -164,14 +177,14 @@
             // BtnSave
             // 
             this.BtnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.BtnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(152)))), ((int)(((byte)(117)))));
             this.BtnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.BtnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnSave.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.Image")));
             this.BtnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSave.Location = new System.Drawing.Point(851, 659);
+            this.BtnSave.Location = new System.Drawing.Point(855, 675);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Padding = new System.Windows.Forms.Padding(35, 0, 25, 0);
             this.BtnSave.Size = new System.Drawing.Size(150, 34);
@@ -190,7 +203,7 @@
             this.BtnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnDelete.Image = global::Klinik.Admin.Properties.Resources.delete;
             this.BtnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnDelete.Location = new System.Drawing.Point(1110, 61);
+            this.BtnDelete.Location = new System.Drawing.Point(1114, 77);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Padding = new System.Windows.Forms.Padding(30, 0, 20, 0);
             this.BtnDelete.Size = new System.Drawing.Size(150, 34);
@@ -209,7 +222,7 @@
             this.BtnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnUpdate.Image = global::Klinik.Admin.Properties.Resources.update;
             this.BtnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnUpdate.Location = new System.Drawing.Point(945, 61);
+            this.BtnUpdate.Location = new System.Drawing.Point(949, 77);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Padding = new System.Windows.Forms.Padding(25, 0, 15, 0);
             this.BtnUpdate.Size = new System.Drawing.Size(150, 34);
@@ -228,7 +241,7 @@
             this.BtnInsert.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnInsert.Image = global::Klinik.Admin.Properties.Resources.insert;
             this.BtnInsert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInsert.Location = new System.Drawing.Point(776, 61);
+            this.BtnInsert.Location = new System.Drawing.Point(780, 77);
             this.BtnInsert.Name = "BtnInsert";
             this.BtnInsert.Padding = new System.Windows.Forms.Padding(35, 0, 25, 0);
             this.BtnInsert.Size = new System.Drawing.Size(150, 34);
@@ -239,7 +252,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(929, 144);
+            this.dateTimePicker1.Location = new System.Drawing.Point(995, 251);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
             this.dateTimePicker1.TabIndex = 63;
@@ -247,7 +260,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(807, 149);
+            this.label4.Location = new System.Drawing.Point(825, 256);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 17);
             this.label4.TabIndex = 62;
@@ -256,30 +269,134 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(167)))), ((int)(((byte)(240)))));
+            this.button1.BackColor = System.Drawing.Color.Indigo;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::Klinik.Admin.Properties.Resources.insert;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(929, 251);
+            this.button1.Location = new System.Drawing.Point(780, 388);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 25, 0);
-            this.button1.Size = new System.Drawing.Size(200, 34);
+            this.button1.Size = new System.Drawing.Size(484, 34);
             this.button1.TabIndex = 64;
-            this.button1.Text = "Details";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Text = "Medicine Details";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // DtpExp
+            // 
+            this.DtpExp.Location = new System.Drawing.Point(995, 593);
+            this.DtpExp.Name = "DtpExp";
+            this.DtpExp.Size = new System.Drawing.Size(200, 23);
+            this.DtpExp.TabIndex = 74;
+            // 
+            // NumQty
+            // 
+            this.NumQty.Location = new System.Drawing.Point(995, 533);
+            this.NumQty.Name = "NumQty";
+            this.NumQty.Size = new System.Drawing.Size(200, 23);
+            this.NumQty.TabIndex = 73;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(995, 561);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 23);
+            this.textBox1.TabIndex = 72;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(807, 222);
+            this.label2.Location = new System.Drawing.Point(825, 564);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(497, 17);
-            this.label2.TabIndex = 65;
-            this.label2.Text = "Medicine\'s Count: ini tersera sih, yg penting nginfoin detialnya, atw dibikin ";
+            this.label2.Size = new System.Drawing.Size(43, 17);
+            this.label2.TabIndex = 71;
+            this.label2.Text = "Price:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(825, 593);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 17);
+            this.label6.TabIndex = 70;
+            this.label6.Text = "Expired Date:";
+            // 
+            // CbSection
+            // 
+            this.CbSection.FormattingEnabled = true;
+            this.CbSection.Items.AddRange(new object[] {
+            "masih",
+            "kosong"});
+            this.CbSection.Location = new System.Drawing.Point(995, 501);
+            this.CbSection.Name = "CbSection";
+            this.CbSection.Size = new System.Drawing.Size(200, 25);
+            this.CbSection.TabIndex = 69;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(825, 504);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 17);
+            this.label5.TabIndex = 68;
+            this.label5.Text = "Type:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(825, 535);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.TabIndex = 67;
+            this.label3.Text = "Quantity:";
+            // 
+            // TbMedicName
+            // 
+            this.TbMedicName.Location = new System.Drawing.Point(995, 472);
+            this.TbMedicName.Name = "TbMedicName";
+            this.TbMedicName.Size = new System.Drawing.Size(200, 23);
+            this.TbMedicName.TabIndex = 66;
+            this.TbMedicName.Text = "-Pick List-";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(825, 475);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(122, 17);
+            this.label7.TabIndex = 65;
+            this.label7.Text = "Medicine\'s Name:";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(28, 426);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(706, 224);
+            this.dataGridView2.TabIndex = 75;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.Color.Indigo;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(779, 153);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 25, 0);
+            this.button2.Size = new System.Drawing.Size(484, 34);
+            this.button2.TabIndex = 76;
+            this.button2.Text = "Medicine Transaction";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // MedicinePurchaseHeaderForm
             // 
@@ -287,7 +404,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1284, 724);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.DtpExp);
+            this.Controls.Add(this.NumQty);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.CbSection);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.TbMedicName);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
@@ -308,8 +436,10 @@
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MedicinePurchaseHeaderForm";
-            this.Text = "z";
+            this.Text = "Medicine Stock -  Admin Form";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumQty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,6 +464,17 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker DtpExp;
+        private System.Windows.Forms.NumericUpDown NumQty;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox CbSection;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TbMedicName;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button button2;
     }
 }

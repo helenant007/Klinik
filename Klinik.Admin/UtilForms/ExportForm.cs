@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Klinik.Admin.MainForms
+namespace Klinik.Admin.UtilForms
 {
-    public partial class MedicineForm : Form
+    public partial class ExportForm : Form
     {
-        public MedicineForm()
+        public ExportForm()
         {
             InitializeComponent();
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
